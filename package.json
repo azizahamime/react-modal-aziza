@@ -1,10 +1,10 @@
 {
   "name": "react-modal-aziza",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "0.1.0",
+  "description": "React Modal library",
   "author": "azizahamime",
   "license": "MIT",
-  "repository": "azizahamime/react-modal-aziza",
+  "repository": "https://github.com/azizahamime/react-modal-aziza.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

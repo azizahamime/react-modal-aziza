@@ -1,6 +1,10 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React, { Fragment } from 'react'
+import { Modal } from './components/modal/modal.jsx'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const ExampleComponent = () => {
+  return (
+    <Fragment>
+      <Modal />
+    </Fragment>
+  )
 }
