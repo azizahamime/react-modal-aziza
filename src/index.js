@@ -4,7 +4,7 @@ import { ModalContent } from './components/modal/modal.jsx'
 export const Modal = () => {
   return (
     <Fragment>
-      <ModalContent message='hello' crossClose btnClose />
+      <ModalContent message='helloo' btnClose crossClose />
     </Fragment>
   )
 }

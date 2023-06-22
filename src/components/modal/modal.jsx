@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react'
 import styles from './modal.css'
 
 export const ModalContent = (props) => {
+  const { crossClose, message, btnClose } = props
   const [isOpenModal, setIsOpenModal] = useState(true)
   const toggleModal = () => setIsOpenModal(!isOpenModal)
   return (
@@ -9,13 +10,13 @@ export const ModalContent = (props) => {
       {isOpenModal && (
         <div className={styles.container}>
           <div className={styles.modal}>
-            {props.crossClose && (
+            {crossClose && (
               <button className={styles.cross} onClick={toggleModal}>
                 x
               </button>
             )}
-            <p>{props.message}</p>
-            {props.btnClose && (
+            <p>{message || 'Enregistrer !!'}</p>
+            {btnClose && (
               <button className={styles.close} onClick={toggleModal}>
                 close
               </button>
