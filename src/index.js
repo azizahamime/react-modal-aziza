@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-import { Modal } from './components/modal/modal.jsx'
+import { ModalContent } from './components/modal/modal.jsx'
 
-export const ExampleComponent = () => {
+export const Modal = () => {
   return (
     <Fragment>
-      <Modal />
+      <ModalContent message='hello' crossClose btnClose />
     </Fragment>
   )
 }

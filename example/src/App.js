@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-modal-aziza'
+import { Modal } from 'react-modal-aziza'
 import 'react-modal-aziza/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent />
+  return <Modal />
 }
 
 export default App
