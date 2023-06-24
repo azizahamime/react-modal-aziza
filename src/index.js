@@ -8,9 +8,8 @@ export const Modal = () => {
         message='helloo'
         btnClose
         crossClose
-      // eslint-disable-next-line prettier/prettier
-      /* btnStyle={{ btnBackgroundColor: '#f2f2f2', btnTextColor: '#000' }}
-    modalStyle={{ modalBackground: '#000', color: '#fff' }} */
+        btnStyle={{ btnBackgroundColor: 'yellow', btnTextColor: '#000' }}
+        modalStyle={{ modalBackground: '#000', color: '#fff' }}
       />
     </Fragment>
   )
