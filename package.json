@@ -1,8 +1,7 @@
 {
   "name": "react-modal-aziza",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "React Modal library",
-  "author": "azizahamime",
   "license": "MIT",
   "repository": "https://github.com/azizahamime/react-modal-aziza.git",
   "main": "dist/index.js",
@@ -49,5 +48,15 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "keywords": [
+    "react",
+    "modal",
+    "library",
+    "react-component"    
+  ],
+  "author": {
+    "name": "aziza hamime",
+    "email": "mess.aziza@gmail.com"
+  }
 }

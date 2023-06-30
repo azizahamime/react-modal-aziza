@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
+/* import React, { Fragment } from 'react'
 import { ModalContent } from './components/modal/modal.jsx'
 
 export const Modal = () => {
   return (
     <Fragment>
-      <ModalContent
+      <Modal
         message='helloo'
         btnClose
         crossClose
@@ -13,4 +13,7 @@ export const Modal = () => {
       />
     </Fragment>
   )
-}
+} */
+
+import { Modal } from './components/modal/modal'
+export default Modal

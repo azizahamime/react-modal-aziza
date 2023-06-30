@@ -1,8 +1,14 @@
 import React, { Fragment, useState } from 'react'
 import styles from './modal.css'
 
-export const ModalContent = (props) => {
-  const { crossClose, message, btnClose, btnStyle, modalStyle } = props
+export const Modal = (props) => {
+  const {
+    crossClose,
+    message,
+    btnClose,
+    btnStyle = { btnBackgroundColor: 'black', btnTextColor: 'white' },
+    modalStyle = { modalBackground: 'white', modalTextColor: 'black' }
+  } = props
   const { btnBackgroundColor, btnTextColor } = btnStyle
   const { modalBackground, modalTextColor } = modalStyle
 
@@ -16,8 +22,8 @@ export const ModalContent = (props) => {
           <div
             className={styles.modal}
             style={{
-              backgroundColor: modalBackground || 'black',
-              color: modalTextColor || 'white'
+              backgroundColor: modalBackground || 'white',
+              color: modalTextColor || 'black'
             }}
           >
             {crossClose && (
