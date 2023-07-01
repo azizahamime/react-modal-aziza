@@ -3,11 +3,10 @@ import styles from './modal.css'
 
 export const Modal = (props) => {
   const {
-    crossClose,
     message,
     btnClose,
     btnStyle = { btnBackgroundColor: 'black', btnTextColor: 'white' },
-    modalStyle = { modalBackground: 'white', modalTextColor: 'black' }
+    modalStyle = { modalBackground: '#f2f2f2', modalTextColor: 'black' }
   } = props
   const { btnBackgroundColor, btnTextColor } = btnStyle
   const { modalBackground, modalTextColor } = modalStyle
@@ -26,18 +25,17 @@ export const Modal = (props) => {
               color: modalTextColor || 'black'
             }}
           >
-            {crossClose && (
-              <button
-                className={styles.cross}
-                onClick={toggleModal}
-                style={{
-                  backgroundColor: btnBackgroundColor || 'black',
-                  color: btnTextColor || 'white'
-                }}
-              >
-                x
-              </button>
-            )}
+            <button
+              className={styles.cross}
+              onClick={toggleModal}
+              style={{
+                backgroundColor: btnBackgroundColor || 'black',
+                color: btnTextColor || 'white'
+              }}
+            >
+              x
+            </button>
+
             <p>{message || 'Enregistrer !!'}</p>
             {btnClose && (
               <button
@@ -48,7 +46,7 @@ export const Modal = (props) => {
                   color: btnTextColor || 'white'
                 }}
               >
-                close
+                Close
               </button>
             )}
           </div>
