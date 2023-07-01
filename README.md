@@ -9,20 +9,42 @@
 ```bash
 npm install --save react-modal-aziza
 ```
+## Modal props
+
+| Name        | type               | feature
+| ----------- | ------------------ | ----------------------------      
+| message     | string (optional)  | text to display on the modal          
+| btnClose    | Boolean (optional) | display close button                               
+| btnStyle    | Object (optional)  | style close button and cross
+| modalStyle  | Object (optional)  | style the modal    
 
 ## Usage
+### btnStyle
+* btnBackgroundColor (string): background color of the cross and close button
+* btnTextColor (string): color of the text inside buttons
+  
+### modalStyle
+* modalBackground (string): background color of the Modal
+* modalTextColor(string): color of the text inside modal
+  
+## Exemple
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-modal-aziza'
+import Modal from 'react-modal-aziza'
 import 'react-modal-aziza/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return <Modal
+    message='helloo'
+    btnClose
+    btnStyle={{ btnBackgroundColor: 'yellow', btnTextColor: '#000' }}
+    modalStyle={{ modalBackground: '#000', modalTextColor: '#fff' }}
+  />
 }
+
+export default App
 ```
 
 ## License
