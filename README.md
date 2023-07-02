@@ -16,7 +16,10 @@ npm install --save react-modal-aziza
 | message     | string (optional)  | text to display on the modal          
 | btnClose    | Boolean (optional) | display close button                               
 | btnStyle    | Object (optional)  | style close button and cross
-| modalStyle  | Object (optional)  | style the modal    
+| modalStyle  | Object (optional)  | style the modal
+| isOpenModal | boolean            | state of the modal
+| onClose     | function           | function close Modal
+    
 
 ## Usage
 ### btnStyle
@@ -30,13 +33,17 @@ npm install --save react-modal-aziza
 ## Exemple
 
 ```jsx
-import React from 'react'
+import React, { useState } from 'react'
 
 import Modal from 'react-modal-aziza'
 import 'react-modal-aziza/dist/index.css'
 
 const App = () => {
+  const [modalDisplayed, setIsDisplayed] = useState(true)
+  const toggleModal = () => setIsDisplayed(!modalDisplayed)
   return <Modal
+    isOpenModal={modalDisplayed}
+    onClose={toggleModal}
     message='Employee created !'
     btnClose
     btnStyle={{ btnBackgroundColor: 'yellow', btnTextColor: '#000' }}

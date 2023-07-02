@@ -1,8 +1,10 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment } from 'react'
 import styles from './modal.css'
 
 export const Modal = (props) => {
   const {
+    isOpenModal = false,
+    onClose,
     message,
     btnClose,
     btnStyle = { btnBackgroundColor: 'black', btnTextColor: 'white' },
@@ -11,8 +13,8 @@ export const Modal = (props) => {
   const { btnBackgroundColor, btnTextColor } = btnStyle
   const { modalBackground, modalTextColor } = modalStyle
 
-  const [isOpenModal, setIsOpenModal] = useState(true)
-  const toggleModal = () => setIsOpenModal(!isOpenModal)
+  // const [isOpenModal, setIsOpenModal] = useState(true)
+  // const toggleModal = () => setIsOpenModal(!isOpenModal)
 
   return (
     <Fragment>
@@ -27,7 +29,7 @@ export const Modal = (props) => {
           >
             <button
               className={styles.cross}
-              onClick={toggleModal}
+              onClick={onClose}
               style={{
                 backgroundColor: btnBackgroundColor || 'black',
                 color: btnTextColor || 'white'
@@ -40,7 +42,7 @@ export const Modal = (props) => {
             {btnClose && (
               <button
                 className={styles.close}
-                onClick={toggleModal}
+                onClick={onClose}
                 style={{
                   backgroundColor: btnBackgroundColor || 'black',
                   color: btnTextColor || 'white'
