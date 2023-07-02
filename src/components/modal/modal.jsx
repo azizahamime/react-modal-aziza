@@ -36,7 +36,7 @@ export const Modal = (props) => {
               x
             </button>
 
-            <p>{message || 'Enregistrer !!'}</p>
+            <p>{message || 'Employee created !!'}</p>
             {btnClose && (
               <button
                 className={styles.close}
